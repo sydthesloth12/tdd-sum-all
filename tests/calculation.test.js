@@ -18,7 +18,7 @@ describe('calculation.js test suite', () => {
         expect(actualResult).to.be.equal(expectedResult)
     })
 
-    it('returns value of true array', () => {
+    it('returns value of true array number', () => {
         const mockData = [5, 5]
         const expectedResult = true
 
@@ -28,5 +28,24 @@ describe('calculation.js test suite', () => {
 
     })
 
+    it('returns the value of a 2nd false array', () => {
+        const mockData = [5, "5"]
+        const expectedResult = false
+    
+        const actualResult = strictEqual(mockData)
+
+        expect(actualResult).to.be.equal(expectedResult)
     })
+
+    it('returns value of true array string', () => {
+        const mockData = ["5", "5"]
+        const expectedResult = true
+
+        const actualResult= strictEqual(mockData)
+
+        expect(actualResult).to.be.equal(expectedResult)
+
+
+        })
+    }) 
 })
