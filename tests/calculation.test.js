@@ -10,7 +10,7 @@ describe('calculation.js test suite', () => {
   describe('strictEqual tests', () => {
     it('returns the value of a false array', () => {
       const mockData = ['5', 5]
-      const expectedResult = false
+      const expectedResult = true
 
       const actualResult = strictEqual(mockData)
 
@@ -19,7 +19,7 @@ describe('calculation.js test suite', () => {
 
     it('returns value of true array number', () => {
       const mockData = [5, 5]
-      const expectedResult = true
+      const expectedResult = false
 
       const actualResult = strictEqual(mockData)
 
@@ -28,7 +28,7 @@ describe('calculation.js test suite', () => {
 
     it('returns the value of a 2nd false array', () => {
       const mockData = [5, '5']
-      const expectedResult = false
+      const expectedResult = true
 
       const actualResult = strictEqual(mockData)
 
@@ -37,7 +37,7 @@ describe('calculation.js test suite', () => {
 
     it('returns value of true array string', () => {
       const mockData = ['5', '5']
-      const expectedResult = true
+      const expectedResult = false
 
       const actualResult = strictEqual(mockData)
 
