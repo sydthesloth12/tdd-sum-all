@@ -3,10 +3,11 @@ const strictEqual = (inputOne, inputTwo) => {
 }
 
 const types = (inputOne, inputTwo) => {
-  return typeof inputOne == typeof inputTwo
+  return typeof inputOne === typeof inputTwo
 }
 
 const values = (inputOne, inputTwo) => {
+  // eslint-disable-next-line eqeqeq
   return inputOne == inputTwo
 }
 

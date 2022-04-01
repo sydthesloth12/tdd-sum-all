@@ -36,5 +36,13 @@ describe('calculation.js test suite', () => {
 
       expect(actualResult).to.be.equal(expectedResult)
     })
+
+    it('number and string, returns false', () => {
+      const expectedResult = false
+
+      const actualResult = strictEqual(8, 'Hello')
+
+      expect(actualResult).to.be.equal(expectedResult)
+    })
   })
 })
