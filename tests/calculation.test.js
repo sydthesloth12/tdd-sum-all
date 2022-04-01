@@ -8,38 +8,31 @@ const strictEqual = require('../calculation')
 
 describe('calculation.js test suite', () => {
   describe('strictEqual tests', () => {
-    it('returns the value of a false array', () => {
-      const mockData = ['5', 5]
-      const expectedResult = true
-
-      const actualResult = strictEqual(mockData)
+    it('string and number, returns false', () => {
+      const expectedResult = false
+      const actualResult = strictEqual(5, '5')
 
       expect(actualResult).to.be.equal(expectedResult)
     })
 
-    it('returns value of true array number', () => {
-      const mockData = [5, 5]
+    it('number and number, returns true', () => {
+      const expectedResult = true
+      const actualResult = strictEqual(5, 5)
+
+      expect(actualResult).to.be.equal(expectedResult)
+    })
+
+    it('string and string, returns true', () => {
+      const expectedResult = true
+      const actualResult = strictEqual('six', 'six')
+
+      expect(actualResult).to.be.equal(expectedResult)
+    })
+
+    it('string and string, returns false', () => {
       const expectedResult = false
 
-      const actualResult = strictEqual(mockData)
-
-      expect(actualResult).to.be.equal(expectedResult)
-    })
-
-    it('returns the value of a 2nd false array', () => {
-      const mockData = [5, '5']
-      const expectedResult = true
-
-      const actualResult = strictEqual(mockData)
-
-      expect(actualResult).to.be.equal(expectedResult)
-    })
-
-    it('returns value of true array string', () => {
-      const mockData = ['5', '5']
-      const expectedResult = false
-
-      const actualResult = strictEqual(mockData)
+      const actualResult = strictEqual('8', '9')
 
       expect(actualResult).to.be.equal(expectedResult)
     })

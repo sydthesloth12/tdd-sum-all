@@ -1,14 +1,13 @@
-// eslint-disable-next-line no-unused-vars
-const strictEqual = (array) => {
-  let valueOne = [0]
-  let valueTwo = [1]
+const strictEqual = (inputOne, inputTwo) => {
+  return types(inputOne, inputTwo) && values(inputOne, inputTwo)
+}
 
-  // eslint-disable-next-line eqeqeq
-  if (valueOne == valueTwo) {
-    return true
-  } else if (valueOne !== valueTwo) {
-    return false
-  }
+const types = (inputOne, inputTwo) => {
+  return typeof inputOne == typeof inputTwo
+}
+
+const values = (inputOne, inputTwo) => {
+  return inputOne == inputTwo
 }
 
 module.exports = strictEqual
